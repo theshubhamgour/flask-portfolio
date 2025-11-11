@@ -7,7 +7,7 @@ app = Flask(__name__)
 CHANNEL_URL = "https://www.youtube.com/shubhamgourtech"
 PLAYLISTS = {
     "jenkins": {
-        "title": "🧩 Jenkins Playlist",
+        "title": "🧩 Jenkins Playlist ",
         "list_id": "PLBr8obKbpkYvJEaPmrzhHhwx8uPj8WYbg",
         "gradient": "linear-gradient(135deg, #ff0844 0%, #ffb199 100%)"
     },
