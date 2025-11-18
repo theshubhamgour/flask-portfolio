@@ -27,7 +27,7 @@ pipeline {
 
         stage('Push to DockerHub') {
             steps {
-               dockerBuildPush("$env.IMAGE_NAME:$BUILD_NUMBER")
+               dockerBuildPush("${env.IMAGE_NAME}:${BUILD_NUMBER}")
             }
         }
 
