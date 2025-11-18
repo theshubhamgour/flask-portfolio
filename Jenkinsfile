@@ -20,12 +20,6 @@ pipeline {
                   }
             }
 
-        stage('Build Docker Image') {
-            steps {
-                sh "docker build -t ${IMAGE_NAME}:${BUILD_NUMBER}."
-            }
-        }
-
         stage('Push to DockerHub') {
             steps {
                dockerBuildPush("${env.IMAGE_NAME}:${BUILD_NUMBER}")
