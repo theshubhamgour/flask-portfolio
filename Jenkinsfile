@@ -27,10 +27,7 @@ pipeline {
 
         stage('Push to DockerHub') {
             steps {
-                script {
-                    sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-                    sh 'docker push $IMAGE_NAME:$BUILD_NUMBER'
-                }
+               dockerBuildPush("$env.IMAGE_NAME:$BUILD_NUMBER")
             }
         }
 
