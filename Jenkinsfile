@@ -1,3 +1,4 @@
+@Library('Shared') _
 pipeline {
     agent any
     environment {
@@ -21,7 +22,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh "docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} ."
+                sh "docker build -t IMAGE_NAME:BUILD_NUMBER."
             }
         }
 
